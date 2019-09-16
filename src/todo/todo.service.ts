@@ -23,7 +23,7 @@ export class TodoService {
     return todos;
   }
 
-  async find(id: string): Promise<any> {
+  async find(id: string): Promise<Todo> {
     const todoFromDb = await this.todoModel.findOne({
       _id: mongodb.ObjectID(id),
     });
